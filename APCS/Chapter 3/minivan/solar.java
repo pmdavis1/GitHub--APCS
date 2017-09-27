@@ -17,7 +17,7 @@ public class solar {
 		weight = scan.nextDouble();
 
 		System.out.println("\nEnter a celestial body:");
-		System.out.print("1-----Moon\n2-----Mars\n3-----Jupiter\n");
+		System.out.print("1-----Moon\n2-----Mercury\n3-----Venus\n4-----Mars\n5-----Jupiter\n6-----Saturn\n7-----Uranus\n8-----Neptune");
 		choice = scan.nextInt();
 
 		switch (choice)
@@ -26,10 +26,25 @@ public class solar {
 			new_weight = weight*.17;
 			break;
 		case 2:
-			new_weight = weight*.38;
+			new_weight = weight*.378;
 			break;
 		case 3:
-			new_weight = weight*2.54;
+			new_weight = weight*.907;
+			break;
+		case 4:
+			new_weight = weight*.377;
+			break;
+		case 5:
+			new_weight = weight*2.364;
+			break;
+		case 6:
+			new_weight = weight*.916;
+			break;
+		case 7:
+			new_weight = weight*.889;
+			break;
+		case 8:
+			new_weight = weight*1.125;
 			break;
 		default:
 			System.out.println("invalid choice");
