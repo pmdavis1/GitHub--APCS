@@ -6,6 +6,12 @@
  * Mini Van
  */
 
+/*Variables:
+ * left = true or false if left door opens
+ * right = true or false if right door opens
+ * dl,dr,cl,mu,il,ir,ol,or,gear = variables that corrospond with the input (like on canvas)
+ */
+
 import java.util.Scanner;
 
 public class minivan
@@ -32,12 +38,13 @@ public class minivan
         or = input.charAt(7);
         gear = input.charAt(8);
         
-        
+       // If the car is not in park or if the master lock is on, then nothing opens. 
         if ((gear != 'p') || (mu == '0'))
         {
             left = false;
             right = false;
         }
+        //if the child lock is off, any door can open
         else if (cl == '0')
         {
             if (dl == '1')
@@ -53,6 +60,7 @@ public class minivan
             if (or == '1')
                 right = true;
         }
+        //if the child lock is on, every door can still open except the insides
         else if (cl == '1')
         {
             if (il == '1')
@@ -69,6 +77,7 @@ public class minivan
                 right = true;
     }
     
+    //if the boolean was defined as true, it opens
         if (left == true)
             System.out.println("left door opens");
         if (right == true)

@@ -14,10 +14,12 @@ public class taxrate
         
         double income, tax = 0;
         Scanner scan = new Scanner(System.in);
-        NumberFormat money = NumberFormat.getCurrencyInstance();
+        NumberFormat money = NumberFormat.getCurrencyInstance(); 
         
         System.out.println("What is your income?");
         income = scan.nextDouble();
+        
+        //to calculate tax for each income level, it taxes a portion of the income and adds a value for how much was previously taxed
         
         if (income <= 50000)
             tax += income*.01;
